@@ -17,10 +17,10 @@ RUN python -m venv ${VENV_PATH}
 
 ENV PATH="${VENV_PATH}/bin:$PATH"
 
-COPY requirements.txt .
+COPY requirement.txt .
 
 RUN pip install --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+    pip install --no-cache-dir -r requirement.txt
 
 # Copy application
 COPY . .
