@@ -24,4 +24,4 @@ WORKDIR /app
 COPY --from=builder /opt/venv /opt/venv
 COPY --from=builder /app /app
 EXPOSE 8000
-CMD ["/opt/venv/bin/gunicorn", "--bind", "0.0.0.0:8000", "myproject.wsgi:application"]
+CMD ["/opt/venv/bin/gunicorn", "--bind", "0.0.0.0:8000", "test_django_pro.wsgi:application"]
